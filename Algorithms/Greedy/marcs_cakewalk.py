@@ -4,10 +4,7 @@ import sys
 
 def marcsCakewalk(calorie):
     calorie.sort(reverse=True)
-    miles = 0
-    for i in range(len(calorie)):
-        miles += calorie[i] * 2**i
-    return miles
+    return sum([(calorie[i] * 2**i) for i in range(len(calorie))])
         
 
 if __name__ == "__main__":
