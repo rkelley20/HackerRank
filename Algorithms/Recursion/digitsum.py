@@ -6,10 +6,7 @@ def digitSum(n, k):
     # Complete this function
     if len(n) == 1: return n
     else:
-        total = 0
-        for i in n:
-            total += int(i)
-        total *= k
+        total = sum([int(x) for x in n]) * k
         return digitSum(str(total), 1)
 
 
